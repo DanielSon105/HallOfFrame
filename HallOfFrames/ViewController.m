@@ -34,7 +34,7 @@
     UIColor *color5 = [UIColor blueColor];
 
 
-    Picture *picture1 = [[Picture alloc] initWithImage:image1 andFrameColor: color1];
+    Picture *picture1 = [[Picture alloc] initWithImage:image1 andFrameColor:color1];
     Picture *picture2 = [[Picture alloc] initWithImage:image2 andFrameColor:color2];
     Picture *picture3 = [[Picture alloc] initWithImage:image3 andFrameColor:color3];
     Picture *picture4 = [[Picture alloc] initWithImage:image4 andFrameColor:color4];
@@ -48,7 +48,8 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    self.currentCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCellID" forIndexPath:indexPath];
+//    self.currentCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCellID" forIndexPath:indexPath];
+    self.currentCell = (PictureCollectionViewCell*)[collectionView cellForItemAtIndexPath:indexPath];
     NSLog(@"--> %p", self.currentCell);
     self.cv.frame = self.view.frame;
     [self.view addSubview:self.cv];
@@ -57,10 +58,10 @@
 }
 
 -(void)customView:(id)viewButton didTapButton:(UIButton *)button{
-    NSLog(@"--> %p", self.currentCell);
+    NSLog(@"--> *** %p", self.currentCell);
     Picture *picture = self.currentCell.picture;
-    picture.frameColor = button.backgroundColor;
-    [self.currentCell usePicture:picture];
+    self.currentCell.contentView.backgroundColor = button.backgroundColor;
+    //[self.currentCell usePicture:picture];
     [self.cv setHidden:YES];
 }
 
