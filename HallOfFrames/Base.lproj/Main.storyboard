@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dNR-pX-me2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,6 +20,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KCK-Ys-iwk">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IHQ-j2-SKE">
                                     <size key="itemSize" width="399" height="381"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -35,10 +37,13 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="STi-Lt-cy8">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <animations/>
                                                 </imageView>
                                             </subviews>
+                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="STi-Lt-cy8" firstAttribute="leading" secondItem="nRr-Ro-BFC" secondAttribute="leadingMargin" constant="41.5" id="1cf-BC-Scl"/>
                                             <constraint firstItem="STi-Lt-cy8" firstAttribute="top" secondItem="nRr-Ro-BFC" secondAttribute="topMargin" constant="33.5" id="5TU-0s-3fl"/>
@@ -78,6 +83,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="KCK-Ys-iwk" secondAttribute="trailing" constant="-20" id="Mhd-yR-2sR"/>
@@ -92,10 +98,10 @@
                                 <exclude reference="KCK-Ys-iwk"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="mqE-si-JlI"/>
                                 <exclude reference="Mhd-yR-2sR"/>
                                 <exclude reference="TsT-V5-J3F"/>
                                 <exclude reference="cZo-Dm-caB"/>
-                                <exclude reference="mqE-si-JlI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -103,18 +109,21 @@
                                 <include reference="KCK-Ys-iwk"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="mqE-si-JlI"/>
                                 <include reference="Mhd-yR-2sR"/>
                                 <include reference="TsT-V5-J3F"/>
                                 <include reference="cZo-Dm-caB"/>
-                                <include reference="mqE-si-JlI"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Hall of Frame!" id="LNQ-rf-efA"/>
+                    <connections>
+                        <outlet property="collectionView" destination="KCK-Ys-iwk" id="s84-GQ-NyK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1201.5" y="352"/>
+            <point key="canvasLocation" x="587" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KTn-Ic-fXs">
@@ -124,6 +133,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RYQ-3V-25d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
