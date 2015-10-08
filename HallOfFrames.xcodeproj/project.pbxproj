@@ -13,6 +13,10 @@
 		E026229C1BC5A85800F51766 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E026229A1BC5A85800F51766 /* Main.storyboard */; };
 		E026229E1BC5A85800F51766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E026229D1BC5A85800F51766 /* Assets.xcassets */; };
 		E02622A11BC5A85800F51766 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E026229F1BC5A85800F51766 /* LaunchScreen.storyboard */; };
+		E02622AA1BC5AA8400F51766 /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E02622A91BC5AA8400F51766 /* PictureCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		E02622BA1BC5BCB900F51766 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = E02622B91BC5BCB900F51766 /* Picture.m */; settings = {ASSET_TAGS = (); }; };
+		E02622BC1BC5C63300F51766 /* BackgroundColorChangeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E02622BB1BC5C63300F51766 /* BackgroundColorChangeView.xib */; settings = {ASSET_TAGS = (); }; };
+		E02622BF1BC5C65900F51766 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E02622BE1BC5C65900F51766 /* CustomView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		E026229D1BC5A85800F51766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E02622A01BC5A85800F51766 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E02622A21BC5A85800F51766 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E02622A81BC5AA8400F51766 /* PictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollectionViewCell.h; sourceTree = "<group>"; };
+		E02622A91BC5AA8400F51766 /* PictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollectionViewCell.m; sourceTree = "<group>"; };
+		E02622B81BC5BCB900F51766 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		E02622B91BC5BCB900F51766 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		E02622BB1BC5C63300F51766 /* BackgroundColorChangeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundColorChangeView.xib; sourceTree = "<group>"; };
+		E02622BD1BC5C65900F51766 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		E02622BE1BC5C65900F51766 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +73,14 @@
 				E02622951BC5A85800F51766 /* AppDelegate.m */,
 				E02622971BC5A85800F51766 /* ViewController.h */,
 				E02622981BC5A85800F51766 /* ViewController.m */,
+				E02622B81BC5BCB900F51766 /* Picture.h */,
+				E02622B91BC5BCB900F51766 /* Picture.m */,
 				E026229A1BC5A85800F51766 /* Main.storyboard */,
+				E02622BB1BC5C63300F51766 /* BackgroundColorChangeView.xib */,
+				E02622BD1BC5C65900F51766 /* CustomView.h */,
+				E02622BE1BC5C65900F51766 /* CustomView.m */,
+				E02622A81BC5AA8400F51766 /* PictureCollectionViewCell.h */,
+				E02622A91BC5AA8400F51766 /* PictureCollectionViewCell.m */,
 				E026229D1BC5A85800F51766 /* Assets.xcassets */,
 				E026229F1BC5A85800F51766 /* LaunchScreen.storyboard */,
 				E02622A21BC5A85800F51766 /* Info.plist */,
@@ -138,6 +156,7 @@
 			files = (
 				E02622A11BC5A85800F51766 /* LaunchScreen.storyboard in Resources */,
 				E026229E1BC5A85800F51766 /* Assets.xcassets in Resources */,
+				E02622BC1BC5C63300F51766 /* BackgroundColorChangeView.xib in Resources */,
 				E026229C1BC5A85800F51766 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,8 +169,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E02622991BC5A85800F51766 /* ViewController.m in Sources */,
+				E02622BA1BC5BCB900F51766 /* Picture.m in Sources */,
+				E02622AA1BC5AA8400F51766 /* PictureCollectionViewCell.m in Sources */,
 				E02622961BC5A85800F51766 /* AppDelegate.m in Sources */,
 				E02622931BC5A85800F51766 /* main.m in Sources */,
+				E02622BF1BC5C65900F51766 /* CustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +320,7 @@
 				E02622A71BC5A85800F51766 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXK-0d-vJy">
+                    <rect key="frame" x="277" y="211" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="100" y="247" width="200" height="75"/>
+                    </variation>
+                    <connections>
+                        <action selector="onButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="vmX-sW-fPc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rd-If-DKt">
+                    <rect key="frame" x="277" y="162" width="46" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="100" y="156" width="200" height="75"/>
+                    </variation>
+                    <connections>
+                        <action selector="onButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="TxH-No-uWa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcu-eQ-3GD">
+                    <rect key="frame" x="277" y="261" width="46" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="100" y="346" width="200" height="75"/>
+                    </variation>
+                    <connections>
+                        <action selector="onButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ssi-f4-Tfl"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+        </view>
+    </objects>
+</document>

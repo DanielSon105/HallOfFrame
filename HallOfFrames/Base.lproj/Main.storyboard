@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dNR-pX-me2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hall of Frame!-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,123 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KCK-Ys-iwk">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IHQ-j2-SKE">
+                                    <size key="itemSize" width="399" height="381"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PictureCellID" id="nRr-Ro-BFC" customClass="PictureCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="399" height="381"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="STi-Lt-cy8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="STi-Lt-cy8" firstAttribute="leading" secondItem="nRr-Ro-BFC" secondAttribute="leadingMargin" constant="41.5" id="1cf-BC-Scl"/>
+                                            <constraint firstItem="STi-Lt-cy8" firstAttribute="top" secondItem="nRr-Ro-BFC" secondAttribute="topMargin" constant="33.5" id="5TU-0s-3fl"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="STi-Lt-cy8" secondAttribute="bottom" constant="31.5" id="RAO-Ut-TN1"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="STi-Lt-cy8" secondAttribute="trailing" constant="41.5" id="a3o-Jl-JDg"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="STi-Lt-cy8"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="1cf-BC-Scl"/>
+                                                <exclude reference="5TU-0s-3fl"/>
+                                                <exclude reference="RAO-Ut-TN1"/>
+                                                <exclude reference="a3o-Jl-JDg"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="STi-Lt-cy8"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="1cf-BC-Scl"/>
+                                                <include reference="5TU-0s-3fl"/>
+                                                <include reference="RAO-Ut-TN1"/>
+                                                <include reference="a3o-Jl-JDg"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="imageView" destination="STi-Lt-cy8" id="8rw-jm-PNW"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9SU-gI-bc1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ans-aM-gBz"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="KCK-Ys-iwk" secondAttribute="trailing" constant="-20" id="Mhd-yR-2sR"/>
+                            <constraint firstItem="KCK-Ys-iwk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="TsT-V5-J3F">
+                                <variation key="widthClass=compact" constant="64"/>
+                            </constraint>
+                            <constraint firstItem="KCK-Ys-iwk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cZo-Dm-caB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KCK-Ys-iwk" secondAttribute="bottom" id="mqE-si-JlI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="KCK-Ys-iwk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Mhd-yR-2sR"/>
+                                <exclude reference="TsT-V5-J3F"/>
+                                <exclude reference="cZo-Dm-caB"/>
+                                <exclude reference="mqE-si-JlI"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="KCK-Ys-iwk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Mhd-yR-2sR"/>
+                                <include reference="TsT-V5-J3F"/>
+                                <include reference="cZo-Dm-caB"/>
+                                <include reference="mqE-si-JlI"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Hall of Frame!" id="LNQ-rf-efA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1201.5" y="352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KTn-Ic-fXs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dNR-pX-me2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RYQ-3V-25d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TsY-cs-RLb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMC-ct-e1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138" y="352"/>
         </scene>
     </scenes>
 </document>

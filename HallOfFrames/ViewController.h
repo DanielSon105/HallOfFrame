@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PictureCollectionViewCell.h"
 
 @interface ViewController : UIViewController
 
+@property NSMutableArray *pictures;
 
 @end
 
