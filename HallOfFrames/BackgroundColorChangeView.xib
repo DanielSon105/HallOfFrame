@@ -13,9 +13,28 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXK-0d-vJy">
                     <rect key="frame" x="277" y="211" width="46" height="30"/>
                     <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="JX8-GH-ZLq"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="SBt-Rc-zF1"/>
+                        <constraint firstAttribute="width" constant="200" id="YeW-tS-ELX"/>
+                        <constraint firstAttribute="height" constant="75" id="aWK-Eu-Ngg"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="100" y="247" width="200" height="75"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="JX8-GH-ZLq"/>
+                            <exclude reference="SBt-Rc-zF1"/>
+                            <exclude reference="YeW-tS-ELX"/>
+                            <exclude reference="aWK-Eu-Ngg"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="JX8-GH-ZLq"/>
+                            <include reference="SBt-Rc-zF1"/>
+                            <include reference="YeW-tS-ELX"/>
+                            <include reference="aWK-Eu-Ngg"/>
+                        </mask>
                     </variation>
                     <connections>
                         <action selector="onButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="vmX-sW-fPc"/>
@@ -24,9 +43,28 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rd-If-DKt">
                     <rect key="frame" x="277" y="162" width="46" height="30"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="bBs-ah-sbn"/>
+                        <constraint firstAttribute="height" constant="75" id="clW-sh-wvG"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="dr1-ni-mZu"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="t7q-ok-75P"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="100" y="156" width="200" height="75"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="bBs-ah-sbn"/>
+                            <exclude reference="clW-sh-wvG"/>
+                            <exclude reference="dr1-ni-mZu"/>
+                            <exclude reference="t7q-ok-75P"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="bBs-ah-sbn"/>
+                            <include reference="clW-sh-wvG"/>
+                            <include reference="dr1-ni-mZu"/>
+                            <include reference="t7q-ok-75P"/>
+                        </mask>
                     </variation>
                     <connections>
                         <action selector="onButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="TxH-No-uWa"/>
@@ -35,9 +73,28 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcu-eQ-3GD">
                     <rect key="frame" x="277" y="261" width="46" height="30"/>
                     <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="6sI-RW-Tbf"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="cBZ-dc-qhE"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="hkK-ya-gyv"/>
+                        <constraint firstAttribute="height" constant="75" id="we9-k5-wDh"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="100" y="346" width="200" height="75"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="6sI-RW-Tbf"/>
+                            <exclude reference="cBZ-dc-qhE"/>
+                            <exclude reference="hkK-ya-gyv"/>
+                            <exclude reference="we9-k5-wDh"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="6sI-RW-Tbf"/>
+                            <include reference="cBZ-dc-qhE"/>
+                            <include reference="hkK-ya-gyv"/>
+                            <include reference="we9-k5-wDh"/>
+                        </mask>
                     </variation>
                     <connections>
                         <action selector="onButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ssi-f4-Tfl"/>
@@ -45,6 +102,34 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="XXK-0d-vJy" firstAttribute="top" secondItem="7Rd-If-DKt" secondAttribute="bottom" constant="8.5" id="4Pn-UJ-EUg"/>
+                <constraint firstItem="zcu-eQ-3GD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IVF-az-8FQ"/>
+                <constraint firstItem="XXK-0d-vJy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Jhw-q5-3Ox"/>
+                <constraint firstItem="7Rd-If-DKt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cAt-v8-Hp3"/>
+                <constraint firstItem="XXK-0d-vJy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nW4-dQ-iDI"/>
+                <constraint firstItem="zcu-eQ-3GD" firstAttribute="top" secondItem="XXK-0d-vJy" secondAttribute="bottom" constant="7.5" id="zmh-hX-ePx"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="cAt-v8-Hp3"/>
+                    <exclude reference="4Pn-UJ-EUg"/>
+                    <exclude reference="Jhw-q5-3Ox"/>
+                    <exclude reference="nW4-dQ-iDI"/>
+                    <exclude reference="IVF-az-8FQ"/>
+                    <exclude reference="zmh-hX-ePx"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <include reference="cAt-v8-Hp3"/>
+                    <include reference="4Pn-UJ-EUg"/>
+                    <include reference="Jhw-q5-3Ox"/>
+                    <include reference="nW4-dQ-iDI"/>
+                    <include reference="IVF-az-8FQ"/>
+                    <include reference="zmh-hX-ePx"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

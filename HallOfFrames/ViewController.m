@@ -53,7 +53,8 @@
 }
 
 -(void)customView:(id)viewButton didTapButton:(UIButton *)button{
-    self.currentCell.backgroundColor = button.backgroundColor;
+    self.currentCell.backgroundView.backgroundColor = button.backgroundColor;
+    [self.vc traverseResponderChainForUIViewController];
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{

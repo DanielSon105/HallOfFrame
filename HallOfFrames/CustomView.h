@@ -16,6 +16,8 @@
 
 
 @interface CustomView : UIView
+- (UIViewController *) firstAvailableUIViewController;
+- (id) traverseResponderChainForUIViewController;
 
 @property (nonatomic, assign)id<CustomViewDelegate> delegate;
 
