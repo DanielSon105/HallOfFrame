@@ -12,7 +12,8 @@
 #import "CustomView.h"
 
 @interface ViewController () <UICollectionViewDelegate,UICollectionViewDataSource,CustomViewDelegate>
-@property CustomView *vc;
+@property CustomView *cv;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property PictureCollectionViewCell *currentCell;
 @end
 
@@ -41,20 +42,26 @@
 
     self.pictures = [NSMutableArray arrayWithObjects:picture1, picture2, picture3, picture4, picture5, nil];
 
-    self.vc = [[[NSBundle mainBundle]loadNibNamed:@"BackgroundColorChangeView" owner:self options:nil] objectAtIndex:0];
-    self.vc.delegate = self;
+    self.cv = [[[NSBundle mainBundle]loadNibNamed:@"BackgroundColorChangeView" owner:self options:nil] objectAtIndex:0];
+    self.cv.delegate = self;
 
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     self.currentCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCellID" forIndexPath:indexPath];
-    [self.view addSubview:self.vc];
+    NSLog(@"--> %p", self.currentCell);
+    self.cv.frame = self.view.frame;
+    [self.view addSubview:self.cv];
+    [self.cv setHidden:NO];
     
 }
 
 -(void)customView:(id)viewButton didTapButton:(UIButton *)button{
-    self.currentCell.backgroundView.backgroundColor = button.backgroundColor;
-    [self.vc traverseResponderChainForUIViewController];
+    NSLog(@"--> %p", self.currentCell);
+    Picture *picture = self.currentCell.picture;
+    picture.frameColor = button.backgroundColor;
+    [self.currentCell usePicture:picture];
+    [self.cv setHidden:YES];
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{

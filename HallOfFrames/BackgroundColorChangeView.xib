@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
@@ -10,8 +10,9 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXK-0d-vJy">
-                    <rect key="frame" x="277" y="211" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXK-0d-vJy">
+                    <rect key="frame" x="279" y="211" width="42" height="30"/>
+                    <animations/>
                     <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="JX8-GH-ZLq"/>
@@ -19,7 +20,7 @@
                         <constraint firstAttribute="width" constant="200" id="YeW-tS-ELX"/>
                         <constraint firstAttribute="height" constant="75" id="aWK-Eu-Ngg"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Green"/>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="JX8-GH-ZLq"/>
@@ -40,8 +41,9 @@
                         <action selector="onButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="vmX-sW-fPc"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rd-If-DKt">
-                    <rect key="frame" x="277" y="162" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rd-If-DKt">
+                    <rect key="frame" x="285" y="162" width="30" height="30"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="bBs-ah-sbn"/>
@@ -49,7 +51,7 @@
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="dr1-ni-mZu"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="t7q-ok-75P"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Red"/>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="bBs-ah-sbn"/>
@@ -70,8 +72,9 @@
                         <action selector="onButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="TxH-No-uWa"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcu-eQ-3GD">
-                    <rect key="frame" x="277" y="261" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcu-eQ-3GD">
+                    <rect key="frame" x="278" y="261" width="44" height="30"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="6sI-RW-Tbf"/>
@@ -79,7 +82,7 @@
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="hkK-ya-gyv"/>
                         <constraint firstAttribute="height" constant="75" id="we9-k5-wDh"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Yellow"/>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="6sI-RW-Tbf"/>
@@ -101,6 +104,7 @@
                     </connections>
                 </button>
             </subviews>
+            <animations/>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="XXK-0d-vJy" firstAttribute="top" secondItem="7Rd-If-DKt" secondAttribute="bottom" constant="8.5" id="4Pn-UJ-EUg"/>
