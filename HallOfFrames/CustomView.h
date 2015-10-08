@@ -10,14 +10,12 @@
 
 @protocol CustomViewDelegate <NSObject>
 
--(void)customView:(id)viewButton didTapButton:(UIButton *)button;
+-(void)customView:(id)view didTapButton:(UIButton *)button;
 
 @end
 
 
 @interface CustomView : UIView
-//- (UIViewController *) firstAvailableUIViewController;
-//- (id) traverseResponderChainForUIViewController;
 
 @property (nonatomic, assign)id<CustomViewDelegate> delegate;
 

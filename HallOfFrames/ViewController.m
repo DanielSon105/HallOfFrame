@@ -21,20 +21,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *image1 = [UIImage imageNamed:@"Beyonce.jpg"];
     UIImage *image2 = [UIImage imageNamed:@"bound.jpg"];
     UIImage *image3 = [UIImage imageNamed:@"dennis_rodman.jpg"];
     UIImage *image4 = [UIImage imageNamed:@"hide_yo.jpg"];
     UIImage *image5 = [UIImage imageNamed:@"jay_cutler.jpg"];
 
-    UIColor *color1 = [UIColor blueColor];
     UIColor *color2 = [UIColor blueColor];
     UIColor *color3 = [UIColor blueColor];
     UIColor *color4 = [UIColor blueColor];
     UIColor *color5 = [UIColor blueColor];
 
 
-    Picture *picture1 = [[Picture alloc] initWithImage:image1 andFrameColor:color1];
+    Picture *picture1 = [[Picture alloc] initWithImage:[UIImage imageNamed:@"Beyonce.jpg"] andFrameColor:[UIColor blueColor]];
     Picture *picture2 = [[Picture alloc] initWithImage:image2 andFrameColor:color2];
     Picture *picture3 = [[Picture alloc] initWithImage:image3 andFrameColor:color3];
     Picture *picture4 = [[Picture alloc] initWithImage:image4 andFrameColor:color4];
@@ -53,16 +51,16 @@
     NSLog(@"--> %p", self.currentCell);
     self.cv.frame = self.view.frame;
     [self.view addSubview:self.cv];
-    [self.cv setHidden:NO];
+//    [self.cv setHidden:NO];
     
 }
 
--(void)customView:(id)viewButton didTapButton:(UIButton *)button{
+-(void)customView:(id)view didTapButton:(UIButton *)button{
     NSLog(@"--> *** %p", self.currentCell);
-    Picture *picture = self.currentCell.picture;
     self.currentCell.contentView.backgroundColor = button.backgroundColor;
     //[self.currentCell usePicture:picture];
-    [self.cv setHidden:YES];
+//    [self.cv setHidden:YES];
+    [self.cv removeFromSuperview];
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
